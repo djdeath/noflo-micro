@@ -11,7 +11,7 @@
   },
   "scripts": [
     "components/In.coffee",
-    "components/IOut.coffee",
+    "components/Out.coffee",
     "index.js"
   ],
   "json": [
