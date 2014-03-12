@@ -1,0 +1,26 @@
+{
+  "name": "noflo-gpio",
+  "description": "GPIO components for NoFlo.",
+  "author": "Lionel Landwerlin",
+  "repo": "djdeath/noflo-gpio",
+  "version": "0.0.1",
+  "keywords": [
+  ],
+  "dependencies": {
+    "noflo/noflo": "*"
+  },
+  "scripts": [
+    "components/In.coffee",
+    "components/IOut.coffee",
+    "index.js"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "components": {
+      "In": "components/In.coffee",
+      "Out": "components/Out.coffee"
+    }
+  }
+}
