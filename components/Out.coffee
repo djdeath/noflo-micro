@@ -7,7 +7,7 @@ class Out extends noflo.Component
   constructor: ->
     @inPorts =
       port: new noflo.Port 'number'
-      value: new noflo.Port 'number'
+      value: new noflo.Port 'boolean'
 
     @inPorts.port.on 'data', (portNumber) =>
       @stopGpio()
@@ -19,7 +19,7 @@ class Out extends noflo.Component
 
   setValue: (value) ->
     return unless @gpio
-    @gpio.set(value)
+    @gpio.set(if value == false then 0 else 1)
 
   stopGpio: () ->
     return unless @gpio

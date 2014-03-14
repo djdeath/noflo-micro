@@ -9,7 +9,7 @@ class In extends noflo.Component
       port: new noflo.Port 'number'
       sampling: new noflo.Port 'number'
     @outPorts =
-      value: new noflo.Port 'number'
+      value: new noflo.Port 'boolean'
 
     @sampling = 250
 
@@ -33,7 +33,7 @@ class In extends noflo.Component
     @gpio = gpio.export(@portNumber, { direction: 'in', interval: @sampling })
     @gpio.on 'change', (val) =>
       return unless @outPorts.value.isAttached()
-      @outPorts.value.send(val)
+      @outPorts.value.send(val != 0)
       @outPorts.value.disconnect()
 
   shutdown: () ->
