@@ -13,6 +13,7 @@
     "components/DigitalRead.coffee",
     "components/DigitalWrite.coffee",
     "components/MonitorPin.coffee",
+    "components/PwmWrite.coffee",
     "index.js"
   ],
   "json": [
@@ -22,7 +23,8 @@
     "components": {
       "DigitalRead": "components/DigitalRead.coffee",
       "DigitalWrite": "components/DigitalWrite.coffee",
-      "MonitorPin": "components/MonitorPin.coffee"
+      "MonitorPin": "components/MonitorPin.coffee",
+      "PwmWrite": "components/PwmWrite.coffee"
     }
   }
 }
