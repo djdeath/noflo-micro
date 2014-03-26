@@ -1,3 +1,3 @@
-# noflo-gpio
+# noflo-micro
 
-GPIO components for NoFlo and Node.js.
+Basic micro controller components for NoFlo and Node.js.

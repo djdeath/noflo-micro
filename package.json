@@ -1,5 +1,5 @@
 {
-  "name": "noflo-gpio",
+  "name": "noflo-micro",
   "description": "Basic micro controller components for NoFlo.",
   "version": "0.0.1",
   "author": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/djdeath/noflo-gpio.git"
+    "url": "git://github.com/djdeath/noflo-micro.git"
   },
   "licenses": [
     {

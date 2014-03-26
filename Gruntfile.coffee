@@ -20,7 +20,7 @@ module.exports = ->
         options:
           action: 'install'
     component_build:
-      'noflo-gpio':
+      'noflo-micro':
         output: './browser/'
         config: './component.json'
         scripts: true
@@ -35,8 +35,8 @@ module.exports = ->
     # https://github.com/anthonyshort/component-coffee/issues/3
     combine:
       browser:
-        input: 'browser/noflo-gpio.js'
-        output: 'browser/noflo-gpio.js'
+        input: 'browser/noflo-micro.js'
+        output: 'browser/noflo-micro.js'
         tokens: [
           token: '\\.coffee'
           string: '.js'
@@ -48,7 +48,7 @@ module.exports = ->
         report: 'min'
       noflo:
         files:
-          './browser/noflo-gpio.min.js': ['./browser/noflo-gpio.js']
+          './browser/noflo-micro.min.js': ['./browser/noflo-micro.js']
 
     # Coding standards
     coffeelint:

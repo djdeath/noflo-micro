@@ -1,8 +1,8 @@
 {
-  "name": "noflo-gpio",
-  "description": "GPIO components for NoFlo.",
+  "name": "noflo-micro",
+  "description": "Basic micro controller components for NoFlo.",
   "author": "Lionel Landwerlin",
-  "repo": "djdeath/noflo-gpio",
+  "repo": "djdeath/noflo-micro",
   "version": "0.0.1",
   "keywords": [
   ],
