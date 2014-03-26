@@ -10,8 +10,9 @@
     "noflo/noflo": "*"
   },
   "scripts": [
-    "components/In.coffee",
-    "components/Out.coffee",
+    "components/DigitalRead.coffee",
+    "components/DigitalWrite.coffee",
+    "components/MonitorPin.coffee",
     "index.js"
   ],
   "json": [
@@ -19,8 +20,9 @@
   ],
   "noflo": {
     "components": {
-      "In": "components/In.coffee",
-      "Out": "components/Out.coffee"
+      "DigitalRead": "components/DigitalRead.coffee",
+      "DigitalWrite": "components/DigitalWrite.coffee",
+      "MonitorPin": "components/MonitorPin.coffee"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "noflo-gpio",
-  "description": "GPIO components for NoFlo.",
+  "description": "Basic micro controller components for NoFlo.",
   "version": "0.0.1",
   "author": {
     "name": "Lionel Landwerlin",
@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "noflo": "~0.4.0",
-    "gpio": "~0.2.5"
+    "gpio": "~0.2.5",
+    "pwm": "~0.0.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -38,8 +39,9 @@
   "keywords": [],
   "noflo": {
     "components": {
-      "In": "components/In.coffee",
-      "Out": "components/Out.coffee"
+      "DigitalRead": "components/DigitalRead.coffee",
+      "DigitalWrite": "components/DigitalWrite.coffee",
+      "MonitorPin": "components/MonitorPin.coffee"
     }
   }
 }
