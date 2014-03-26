@@ -38,7 +38,7 @@ module.exports = ->
         input: 'browser/noflo-gpio.js'
         output: 'browser/noflo-gpio.js'
         tokens: [
-          token: '.coffee'
+          token: '\\.coffee'
           string: '.js'
         ]
 
