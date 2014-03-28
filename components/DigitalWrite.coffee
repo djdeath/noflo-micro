@@ -30,6 +30,7 @@ class DigitalWrite extends noflo.Component
   startGpio: () ->
     return unless @pinNumber
     @gpio = gpio.export(@pinNumber, { direction: 'out' })
+    @gpio.set(if @value then 1 else 0) if @value
 
   shutdown: () ->
     @stopGpio()
