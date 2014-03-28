@@ -10,7 +10,9 @@ class PwmWrite extends noflo.Component
       dutycycle: new noflo.Port 'number'
       period: new noflo.Port 'number'
 
-    @chipNumber = 0
+    @chipNumber = null
+    @dutyCycle = null
+    @period = null
 
     @inPorts.pin.on 'data', (value) =>
       @stopGpio()
@@ -32,14 +34,14 @@ class PwmWrite extends noflo.Component
     delete @period
 
   startGpio: () ->
-    return unless @pinNumber
+    return unless @pinNumber != null
     @pwm = pwm.export(@chipNumber, @pinNumber)
     @applyParameters()
 
   applyParameters: () ->
     return unless @pwm
-    @pwm.setDutyCycle(@dutyCycle) if @dutyCycle
-    @pwm.setPeriod(@period) if @period
+    @pwm.setDutyCycle(@dutyCycle) if @dutyCycle != null
+    @pwm.setPeriod(@period) if @period != null
 
   shutdown: () ->
     @stopGpio()
