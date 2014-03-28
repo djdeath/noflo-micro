@@ -17,8 +17,9 @@ class DigitalWrite extends noflo.Component
       @setValue(value)
 
   setValue: (value) ->
+    @value = value
     return unless @gpio
-    @gpio.set(if value then 0 else 1)
+    @gpio.set(if value then 1 else 0)
 
   stopGpio: () ->
     return unless @gpio
