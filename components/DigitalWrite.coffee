@@ -9,6 +9,7 @@ class DigitalWrite extends noflo.Component
       pin: new noflo.Port 'number'
       in: new noflo.Port 'boolean'
 
+    @value = null
     @inPorts.pin.on 'data', (pinNumber) =>
       @stopGpio()
       @pinNumber = pinNumber
@@ -19,7 +20,7 @@ class DigitalWrite extends noflo.Component
   setValue: (value) ->
     @value = value
     return unless @gpio
-    @gpio.set(if value then 1 else 0)
+    @gpio.set(if @value then 1 else 0)
 
   stopGpio: () ->
     return unless @gpio
@@ -30,7 +31,9 @@ class DigitalWrite extends noflo.Component
   startGpio: () ->
     return unless @pinNumber
     @gpio = gpio.export(@pinNumber, { direction: 'out' })
-    @gpio.set(if @value then 1 else 0) if @value
+    @gpio.on 'directionChange', () =>
+      if @value != null
+        @gpio.set(if @value then 1 else 0)
 
   shutdown: () ->
     @stopGpio()
