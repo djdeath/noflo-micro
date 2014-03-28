@@ -1,7 +1,10 @@
 {
   "name": "noflo-micro",
   "description": "Basic micro controller components for NoFlo.",
-  "author": "Lionel Landwerlin",
+  "author": {
+    "name": "Lionel Landwerlin",
+    "email": "lionel.g.landwerlin@linux.intel.com"
+  },
   "repo": "djdeath/noflo-micro",
   "version": "0.0.1",
   "keywords": [
