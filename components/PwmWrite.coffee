@@ -10,7 +10,7 @@ class PwmWrite extends noflo.Component
       dutycycle: new noflo.Port 'number'
       period: new noflo.Port 'number'
 
-    @chipNumber = null
+    @chipNumber = 0
     @dutyCycle = null
     @period = null
 
