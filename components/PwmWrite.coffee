@@ -35,8 +35,8 @@ class PwmWrite extends noflo.Component
 
   startGpio: () ->
     return unless @pinNumber != null
-    @pwm = pwm.export(@chipNumber, @pinNumber)
-    @applyParameters()
+    @pwm = pwm.export(@chipNumber, @pinNumber, () =>
+      @applyParameters())
 
   applyParameters: () ->
     return unless @pwm
