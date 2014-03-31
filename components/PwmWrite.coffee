@@ -11,8 +11,8 @@ class PwmWrite extends noflo.Component
       period: new noflo.Port 'number'
 
     @chipNumber = 0
-    @dutyCycle = null
-    @period = null
+    @dutyCycle = 0
+    @period = 0
 
     @inPorts.pin.on 'data', (value) =>
       @stopGpio()
