@@ -42,9 +42,10 @@ class PwmWrite extends noflo.Component
         @applyParameters()))
 
   applyParameters: () ->
-    return unless @pwm
-    @pwm.setDutyCycle(@dutyCycle) if @dutyCycle != null
-    @pwm.setPeriod(@period) if @period != null
+    @pwm.setDutyCycle(0, () =>
+      @pwm.setPeriod(0, () =>
+        @pwm.setPeriod(@period, () =>
+          @pwm.setDutyCycle(@dutyCycle))))
 
   shutdown: () ->
     @stopGpio()
