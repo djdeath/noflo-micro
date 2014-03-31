@@ -20,10 +20,10 @@ class PwmWrite extends noflo.Component
       @startGpio()
     @inPorts.dutycycle.on 'data', (value) =>
       @dutyCycle = value
-      @applyParameters()
+      @pwm.setDutyCycle(@dutyCycle) if @ready
     @inPorts.period.on 'data', (value) =>
       @period = value
-      @applyParameters()
+      @pwm.setPeriod(@period) if @ready
 
   stopGpio: () ->
     return unless @pwm
